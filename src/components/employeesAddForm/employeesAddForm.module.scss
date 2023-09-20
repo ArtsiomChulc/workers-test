@@ -1,0 +1,14 @@
+.addEmployees {
+  background-color: darkblue;
+  color: white;
+  padding: 40px;
+
+  .workerTitle {
+    margin-bottom: 40px;
+  }
+
+  .addWorkersForm {
+    display: flex;
+    gap: 10px;
+  }
+}

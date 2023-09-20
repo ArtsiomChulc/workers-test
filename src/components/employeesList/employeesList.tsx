@@ -7,6 +7,10 @@ const EmployeesList = () => {
     return (
         <ul className={s.wrapListItems}>
             <EmployeesListItem/>
+            <EmployeesListItem/>
+            <EmployeesListItem/>
+            <EmployeesListItem/>
+            <EmployeesListItem/>
         </ul>
     );
 };

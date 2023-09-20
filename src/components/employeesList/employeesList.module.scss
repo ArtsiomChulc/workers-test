@@ -1,0 +1,8 @@
+.wrapListItems {
+  margin: 0;
+  padding: 0;
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

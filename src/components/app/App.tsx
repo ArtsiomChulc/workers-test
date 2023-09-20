@@ -4,6 +4,7 @@ import s from './app.module.scss';
 import AppInfo from "../../components/appInfo/AppInfo";
 import SearchPanel from "../../components/searchPanel/SearchPanel";
 import EmployeesList from "../../components/employeesList/employeesList";
+import EmployeesAddForm from "../../components/employeesAddForm/EmployeesAddForm";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
             <EmployeesList/>
 
-            {/*<EmployeesAddForm/>*/}
+            <EmployeesAddForm/>
         </div>
     );
 }

@@ -3,12 +3,13 @@ import Form from 'react-bootstrap/Form';
 
 import {ReactComponent as IconCookie} from '../../assets/icons/cookieIcon.svg';
 import {ReactComponent as IconTrash} from '../../assets/icons/trashIcon.svg';
+import {ReactComponent as IconStar} from '../../assets/icons/starIcon.svg';
 
 import s from './employeesListItem.module.scss'
 
 const EmployeesListItem = () => {
     return (
-        <div>
+        <>
             <li className={s.listItem}>
                 <span className={s.worker}>John Doe</span>
                 <Form.Control size="lg" type="text" defaultValue={1000}/>
@@ -19,10 +20,10 @@ const EmployeesListItem = () => {
                     <button type={'button'} className={s.btnTrash}>
                         <IconTrash/>
                     </button>
-
+                    <IconStar className={s.btnStar}/>
                 </div>
             </li>
-        </div>
+        </>
     );
 };
 
