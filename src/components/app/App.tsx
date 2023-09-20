@@ -1,12 +1,25 @@
 import React from 'react';
 
+import s from './app.module.scss';
+import AppInfo from "../../components/appInfo/AppInfo";
+import SearchPanel from "../../components/searchPanel/SearchPanel";
+import EmployeesList from "../../components/employeesList/employeesList";
+
 
 function App() {
-  return (
-    <div>
+    return (
+        <div className={s.app}>
+            <AppInfo/>
 
-    </div>
-  );
+            <div>
+                <SearchPanel/>
+            </div>
+
+            <EmployeesList/>
+
+            {/*<EmployeesAddForm/>*/}
+        </div>
+    );
 }
 
 export default App;

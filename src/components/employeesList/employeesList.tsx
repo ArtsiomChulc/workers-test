@@ -1,10 +1,13 @@
 import React from 'react';
+import EmployeesListItem from "../employeesListItem/EmployeesListItem";
+
+import s from './employeesList.module.scss';
 
 const EmployeesList = () => {
     return (
-        <div>
-
-        </div>
+        <ul className={s.wrapListItems}>
+            <EmployeesListItem/>
+        </ul>
     );
 };
 
