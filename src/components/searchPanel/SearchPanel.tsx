@@ -8,16 +8,7 @@ import s from './searchPanel.module.scss'
 const SearchPanel = () => {
     return (
         <div className={s.searchPanel}>
-            <InputGroup className="mb-3">
-                <InputGroup.Text id="inputGroup-sizing-default">
-                    Найти сотрудника
-                </InputGroup.Text>
-                <Form.Control
-                    aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default"
-                    placeholder={'Найти сотрудника'}
-                />
-            </InputGroup>
+            <Form.Control size="lg" type="text" placeholder="Найти сотрудника" />
             <div className={s.btn}>
                 <Button size={'lg'} variant={"light"}>Все сотрудники</Button>
                 <Button size={'lg'} variant={"primary"}>На повышение</Button>

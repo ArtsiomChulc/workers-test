@@ -3,10 +3,19 @@
   color: white;
   padding: 40px;
 
+  input::placeholder {
+    font-size: calc(14px + 12 * (100vw / 1440));
+  }
+
   .btn {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     padding: 40px 0;
+
+    button {
+      font-size: calc(10px + 12 * (100vw / 1440));
+    }
   }
 }

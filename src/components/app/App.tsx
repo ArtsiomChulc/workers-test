@@ -5,6 +5,7 @@ import AppInfo from "../../components/appInfo/AppInfo";
 import SearchPanel from "../../components/searchPanel/SearchPanel";
 import EmployeesList from "../../components/employeesList/employeesList";
 import EmployeesAddForm from "../../components/employeesAddForm/EmployeesAddForm";
+import {stateStatic} from "../../store/stateStatic";
 
 
 
@@ -18,7 +19,7 @@ function App() {
                 <SearchPanel/>
             </div>
 
-            <EmployeesList/>
+            <EmployeesList state={stateStatic}/>
 
             <EmployeesAddForm/>
         </div>

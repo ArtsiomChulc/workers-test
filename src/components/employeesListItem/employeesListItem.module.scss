@@ -37,6 +37,9 @@
     }
     .btnStar {
       width: 35px;
+      &.active {
+        fill: yellow;
+      }
     }
   }
 }
