@@ -1,10 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
+import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import {addWorkerReducer} from "../components/employeesListItem/addWorcerSlice";
 
+export const rootReducer = combineReducers({
+    addWorker: addWorkerReducer
+})
+
 export const store = configureStore({
-    reducer: {
-        addWorker: addWorkerReducer
-    },
+    reducer: rootReducer
 })
 
 // Выведите типы RootState и AppDispatch из самого магазина.
