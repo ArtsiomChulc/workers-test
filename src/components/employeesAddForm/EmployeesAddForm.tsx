@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import s from './employeesAddForm.module.scss';
 
 import {useDispatch} from "react-redux";
-import {addWorker} from "../../components/employeesListItem/addWorcerSlice";
+import {addWorker} from "../../components/employeesListItem/emloyeesSlice";
 import {v1} from "uuid";
 
 

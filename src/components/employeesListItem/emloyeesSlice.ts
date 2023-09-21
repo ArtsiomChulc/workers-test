@@ -17,17 +17,25 @@ export const initialState: StateType[] = [
     {id: v1(), name: 'Kolka B.', salary: 700, increase: false},
 ]
 
-const increaseSlice = createSlice({
+const employeesSlice = createSlice({
     name: 'increase',
     initialState,
     reducers: {
         addWorker: (state, action: PayloadAction<{ id: string, name: string, salary: number, increase: boolean }>) => {
             state.push(action.payload)
-        }
+        },
+        toggleIncrease: (state, action: PayloadAction<string>) => {
+            const workerId = action.payload;
+            const worker = state.find((w) => w.id === workerId);
+            if (worker) {
+                worker.increase = !worker.increase;
+            }
+        },
     }
 })
 
-export const addWorkerReducer = increaseSlice.reducer
-export const {addWorker} = increaseSlice.actions
+export const employeesReducer = employeesSlice.reducer
+export const {addWorker} = employeesSlice.actions
+export const {toggleIncrease} = employeesSlice.actions
 // export const appReducer = slice.reducer;
 // export const appActions = slice.actions;

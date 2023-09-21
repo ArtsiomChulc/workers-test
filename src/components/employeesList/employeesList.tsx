@@ -4,14 +4,12 @@ import EmployeesListItem from "../employeesListItem/EmployeesListItem";
 import s from './employeesList.module.scss';
 import {useSelector} from "react-redux";
 import {RootState} from "../../store/store";
-import {StateType} from "../../components/employeesListItem/addWorcerSlice";
+import {employeesReducer, StateType} from "../../components/employeesListItem/emloyeesSlice";
 
 
 const EmployeesList = () => {
 
-    const state = useSelector<RootState, StateType[]>(state => state.addWorker)
-
-    console.log(state)
+    const state = useSelector<RootState, StateType[]>(state => state.employeesReducer)
 
     const element = state.map(el => {
         const {id, name, salary, increase} = el

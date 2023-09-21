@@ -7,6 +7,7 @@ import {ReactComponent as IconStar} from '../../assets/icons/starIcon.svg';
 
 import s from './employeesListItem.module.scss';
 import {useDispatch} from "react-redux";
+import {toggleIncrease} from "../../components/employeesListItem/emloyeesSlice";
 
 type PropsType = {
     id: string
@@ -18,13 +19,14 @@ type PropsType = {
 const EmployeesListItem = (props: PropsType) => {
     const {id, name, salary, increase} = props
 
-    const [incr, setIncr] = useState<boolean>(increase)
+    const dispatch = useDispatch()
 
-    const onClickHandler = () => {
-        setIncr(!incr)
+    const onClickHandler = (id: string) => {
+        dispatch(toggleIncrease(id))
+        console.log(id)
     }
 
-    const classNames = `${s.worker} ${incr ? s.cookieActive : ''}`
+    const classNames = `${s.worker} ${increase ? s.cookieActive : ''}`
 
     return (
         <>
@@ -34,14 +36,14 @@ const EmployeesListItem = (props: PropsType) => {
                     size="lg" type="text"
                     defaultValue={1000}
                     value={salary}
-                    style={{color: `${incr ? '#b4bd40' : ''}`}}
+                    style={{color: `${increase ? '#b4bd40' : ''}`}}
                 />
                 <div className={s.btnIcons}>
 
                     <button
                         type={'button'}
                         className={s.btnCookie}
-                    onClick={onClickHandler}>
+                    onClick={() => onClickHandler(id)}>
                         <IconCookie/>
                     </button>
 
