@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
+import type {PayloadAction} from '@reduxjs/toolkit';
 import {v1} from "uuid";
 
 export type StateType = {
-    id:  string
+    id: string
     name: string
     salary: number
     increase: boolean
@@ -21,17 +21,13 @@ const increaseSlice = createSlice({
     name: 'increase',
     initialState,
     reducers: {
-        setIncrease: (state, action: PayloadAction<{ increase: boolean }>) => {
-            state.map(el => {
-                return (
-                    el.increase = !action.payload.increase
-                )
-            })
+        addWorker: (state, action: PayloadAction<{ id: string, name: string, salary: number, increase: boolean }>) => {
+            state.push(action.payload)
         }
     }
 })
 
-export const incReducer = increaseSlice.reducer
-export const {setIncrease}= increaseSlice.actions
+export const addWorkerReducer = increaseSlice.reducer
+export const {addWorker} = increaseSlice.actions
 // export const appReducer = slice.reducer;
 // export const appActions = slice.actions;
