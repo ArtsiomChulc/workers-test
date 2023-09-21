@@ -10,6 +10,10 @@
   .worker {
     font-size: calc(12px + 10 * (100vw / 1440));
     width: 20%;
+
+    &.cookieActive {
+      color: #b4bd40;
+    }
   }
 
   input {
@@ -37,9 +41,6 @@
     }
     .btnStar {
       width: 35px;
-      &.active {
-        fill: yellow;
-      }
     }
   }
 }

@@ -1,16 +1,13 @@
 import React from 'react';
 import EmployeesListItem from "../employeesListItem/EmployeesListItem";
+import {initialState} from "../../components/employeesListItem/slice";
 
 import s from './employeesList.module.scss';
-import {StateType} from "../../store/stateStatic";
 
-type PropsType = {
-    state: StateType[]
-}
 
-const EmployeesList = (props: PropsType) => {
+const EmployeesList = () => {
 
-    const element = props.state.map(el => {
+    const element = initialState.map(el => {
         const {id, name, salary, increase} = el
         return (
             <EmployeesListItem key={id} id={id} name={name} salary={salary} increase={increase} />
