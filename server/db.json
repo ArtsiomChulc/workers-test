@@ -1,0 +1,58 @@
+{
+    "workers": [
+        {
+            "id": "1",
+            "name": "John Doe",
+            "salary": 300,
+            "increase": false
+        },
+        {
+            "id": "2",
+            "name": "Jane Smith",
+            "salary": 400,
+            "increase": true
+        },
+        {
+            "id": "3",
+            "name": "Michael Johnson",
+            "salary": 500,
+            "increase": false
+        },
+        {
+            "id": "4",
+            "name": "Emily Davis",
+            "salary": 350,
+            "increase": true
+        },
+        {
+            "id": "5",
+            "name": "William Brown",
+            "salary": 450,
+            "increase": false
+        },
+        {
+            "id": "6",
+            "name": "Olivia Wilson",
+            "salary": 550,
+            "increase": true
+        },
+        {
+            "id": "7",
+            "name": "James Taylor",
+            "salary": 375,
+            "increase": false
+        },
+        {
+            "id": "8",
+            "name": "Sophia Martinez",
+            "salary": 425,
+            "increase": true
+        },
+        {
+            "id": "9",
+            "name": "Benjamin Anderson",
+            "salary": 525,
+            "increase": false
+        }
+    ]
+}
