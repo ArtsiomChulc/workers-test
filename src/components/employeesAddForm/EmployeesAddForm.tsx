@@ -34,7 +34,6 @@ const EmployeesAddForm = () => {
 
         dispatch(addWorker(newWorker));
 
-        // Очистить поля формы после добавления сотрудника
         setName('');
         setSalary('');
     }, [dispatch, name, salary]);

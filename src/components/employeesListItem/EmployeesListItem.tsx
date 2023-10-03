@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 
 import {ReactComponent as IconCookie} from '../../assets/icons/cookieIcon.svg';
@@ -23,7 +23,6 @@ const EmployeesListItem = (props: PropsType) => {
 
     const onClickHandler = (id: string) => {
         dispatch(toggleIncrease(id))
-        console.log(id)
     }
 
     const classNames = `${s.worker} ${increase ? s.cookieActive : ''}`

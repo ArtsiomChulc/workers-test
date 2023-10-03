@@ -4,12 +4,12 @@ import EmployeesListItem from "../employeesListItem/EmployeesListItem";
 import s from './employeesList.module.scss';
 import {useSelector} from "react-redux";
 import {RootState} from "../../store/store";
-import {employeesReducer, StateType} from "../../components/employeesListItem/emloyeesSlice";
+import {StateType} from "../../components/employeesListItem/emloyeesSlice";
 
 
 const EmployeesList = () => {
 
-    const state = useSelector<RootState, StateType[]>(state => state.employeesReducer)
+    const state = useSelector<RootState, Array<StateType>>(state => state.state)
 
     const element = state.map(el => {
         const {id, name, salary, increase} = el
@@ -20,7 +20,9 @@ const EmployeesList = () => {
 
     return (
         <ul className={s.wrapListItems}>
-            {element}
+            {state.length === 0 ? <div
+                style={{textAlign: 'center'}}
+            >Добавьте сотрудников с помощью формы ниже</div> : element}
         </ul>
     );
 };

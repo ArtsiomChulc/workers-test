@@ -2,7 +2,7 @@ import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import {employeesReducer} from "../components/employeesListItem/emloyeesSlice";
 
 export const rootReducer = combineReducers({
-    employeesReducer
+    state: employeesReducer,
 })
 
 export const store = configureStore({
